@@ -1,0 +1,9 @@
+function solve(arr){
+    //let result = Number(arr[0]) + Number(arr[arr.length-1]);
+    let result = Number(arr.pop()) + Number(arr.shift());
+
+    return result;
+}
+
+console.log(solve(['20', '30', '40']));
+console.log(solve(['5', '10']));

@@ -1,7 +1,7 @@
 function solve(matrix){
-    let sumRow = matrix.map((col => col.reduce((result,curr) => result + curr, 0)));
+    let sumRow = matrix.map((col => col.reduce((result1,curr1) => result1 + curr1, 0)));
  
-    let sumCol = matrix.reduce((result, curr) => result.map((b, y) => curr[y] + b));
+    let sumCol = matrix.reduce((result2, result1) => result2.map((curr1, y) => result1[y] + curr1));
  
     let equal = array => array.every( x => x === array[0]);
  

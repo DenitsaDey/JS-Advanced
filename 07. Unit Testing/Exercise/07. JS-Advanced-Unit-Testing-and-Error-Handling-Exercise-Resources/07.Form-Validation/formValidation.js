@@ -1,7 +1,7 @@
 function validate() {
-    const userNamePattern = /^[A-z0-9]{3,20}$/;
+    const userNamePattern = /^[a-zA-Z0-9]{3,20}$/;
     const passwordPattern = /^\w{5,15}$/;
-    const emailPattern = /^\w+@\w+\.\w+$/;
+    const emailPattern = /^.*@.*\..*$/;
 
     let isValidInput = true;
     let isChecked = false;
@@ -52,7 +52,7 @@ function validate() {
 
         if(isChecked){
             const companyNo = document.getElementById('companyNumber');
-            if(Number(companyNo.value) < 1000 || Number(companyNo.value > 9999)){
+            if(isNaN(Number(companyNo.value)) || Number(companyNo.value) < 1000 || Number(companyNo.value) > 9999){
                 companyNo.style.borderColor = 'red';
             } else{
                 companyNo.style.borderColor = 'none';

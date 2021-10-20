@@ -77,7 +77,9 @@ function solve() {
         const element = document.createElement(type);
 
         for(let prop in attr){
-            element[prop] = attr[prop];
+            //element[prop] = attr[prop];
+            element.classList.add(attr[prop]);
+            //element.setAttribute(attr[prop]);
         }
 
         for(let item of content){

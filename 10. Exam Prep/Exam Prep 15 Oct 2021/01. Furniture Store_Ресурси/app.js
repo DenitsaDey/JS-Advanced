@@ -24,13 +24,13 @@ function solve() {
             return;
         }
 
-        const moreBtn = e('button', { class: 'moreBtn'}, 'More Info');
-        const buyBtn = e('button', { class: 'buyBtn' }, 'Buy it');
-        const tableRow = e('tr', { class: 'info' },
+        const moreBtn = e('button', { className: 'moreBtn'}, 'More Info');
+        const buyBtn = e('button', { className: 'buyBtn' }, 'Buy it');
+        const tableRow = e('tr', { className: 'info' },
             e('td', {}, model),
             e('td', {}, price.toFixed(2)),
             e('td', {}, moreBtn, buyBtn));
-        const moreDetails = e('tr', {class: 'hide'},
+        const moreDetails = e('tr', {className: 'hide'},
             e('td', {}, `Year: ${year}`),
             e('td', {colspan: '3'}, `Description: ${description}`));
 
@@ -79,7 +79,7 @@ function solve() {
         for(let prop in attr){
             //element[prop] = attr[prop];
             element.classList.add(attr[prop]);
-            //element.setAttribute(attr[prop]);
+            //element.setAttribute(prop, attr[prop]);
         }
 
         for(let item of content){
